@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CRR Pet Photography</title>
+	<link rel="stylesheet" href="style.css">
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+body {
+    background-repeat: no-repeat;
+	font-family: sans-serif;
+    margin: 0;
+background: rgb(91,183,255);
+background: linear-gradient(331deg, rgba(91,183,255,1) 0%, rgba(255,225,161,1) 100%);
+
+}
+        
+header {
+    text-align: center;
+    font-size: 14pt;
+    font-family: 'Abril Fatface', cursive;
+	padding: 40px 0 280px 0;
+	top: 0;
+    height: 18%;
+	width: 100%;
+	z-index: 1;
+	background-image: url('img/Untitled-2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+    box-shadow: 0px 0px 10px;
+}
+        
+nav {
+border-radius: 10px;
+overflow: hidden;
+background-color: #f7f7f7;
+    width: fit-content;
+    box-shadow: 0px 0px 25px ;
+    margin: 0 auto;
+}
+
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+nav li {
+float: left;
+}
+
+nav li a {
+display: block;
+color: #333;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border-radius: 10px;
+}
+
+nav li a:hover {
+background-color: #ddd;
+color: #000;
+}
+        
+main {
+position: relative;
+padding-top: 1.5vh;
+}
+
+section {
+padding: 1.5vh;
+text-align: left;
+border: 1px solid;
+padding: 10px;
+box-shadow: 5px 10px #888888;
+}
+        
+section#services {
+ width: 50vw;
+ margin: 0 auto;
+ border-radius: 12px;
+        }
+        
+section#about {
+    
+        }
+        
+section#gallery {
+    width:95%;
+    margin: 0 auto;
+    border-radius: 20px;
+        }
+        
+section#about {
+    font-size: 16pt;
+    text-align: center;
+    width: 75vw;
+    margin: 0 auto;
+    font-family: serif;
+        }
+        
+ section#contact {
+    width: 50%;
+    margin: 0 auto;
+     border-radius: 15px;
+        }
+h1 {
+color:white;
+ -webkit-text-stroke-width: .1px;
+-webkit-text-stroke-color: darkblue;
+*/
+   }
+        
+.gallery-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.gallery-container img {
+	margin: 5px;
+	max-width: 300px;
+	height: auto;
+    border: 2px solid #fff; 
+}
+
+.enlarged {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.enlarged.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.enlarged img {
+  max-height: 90vh;
+  max-width: 90vw;
+  margin: auto;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+form label,
+form input,
+form textarea {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+form label {
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 7px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  width: 33vw;
+  box-sizing: border-box;
+}
+
+form input[type="submit"] {
+  background-color: #2962FF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0039CB;
+}
+
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+    width: 100%;
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>Crooked River Photography</h1>
+		<nav>
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#gallery">Gallery</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="about">
+			<h2>About Us</h2>
+			<p>We are passionate about pet photography and capturing those special moments with your furry friend. Our mission is to create beautiful images that you'll cherish forever!</p>
+		</section>
+            <br/>
+		<section id="services">
+			<h2>Our Services</h2>
+			<ul>
+				<li>Portrait Sessions</li>
+				<li>Candid Shots</li>
+				<li>Outdoor Adventures</li>
+				<li>Custom Packages Available</li>
+			</ul>
+		</section>
+            <br/>
+		<section id="gallery">
+			<h2>Gallery</h2>
+			<div class="gallery-container">
+				<img src="img/pet1.jpg" alt="Wild bluebird out for a bath">
+				<img src="img/pet2.jpg" alt="Monsiuer Mokey">
+				<img src="img/pet3.jpg" alt="Wild lil' scaley dude sunbathin on a rock">
+				<img src="img/pet4.jpg" alt="Sir Captain Pirate Ship">
+			</div>
+		</section>
+        <br/>
+		<section id="contact">
+			<h2>Contact Us</h2>
+			<form action="submit-form.php" method="post">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name">
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email">
+
+				<label for="message">Message:</label>
+				<textarea id="message" name="message"></textarea>
+
+				<input type="submit" value="Send">
+			</form>
+		</section>
+	</main>
+<br/>
+	<footer>
+		<p>&copy; 2023 Pet Photography. All rights reserved.</p>
+	</footer>
+<script> const images = document.querySelectorAll('img');
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    const enlarged = document.createElement('div');
+    enlarged.classList.add('enlarged');
+    
+    const imgClone = img.cloneNode(true);
+    enlarged.appendChild(imgClone);
+    
+    const closeBtn = document.createElement('span');
+    closeBtn.innerHTML = '&times;';
+    closeBtn.classList.add('close-btn');
+    closeBtn.addEventListener('click', () => {
+      enlarged.classList.remove('show');
+      setTimeout(() => {
+        enlarged.remove();
+      }, 300);
+    });
+    enlarged.appendChild(closeBtn);
+    
+    document.body.appendChild(enlarged);
+    
+    setTimeout(() => {
+      enlarged.classList.add('show');
+    }, 50);
+    
+    enlarged.addEventListener('click', () => {
+      enlarged.classList.remove('show');
+      setTimeout(() => {
+        enlarged.remove();
+      }, 300);
+    });
+  });
+});
+
+
+</script>
+</body>
+</html>
